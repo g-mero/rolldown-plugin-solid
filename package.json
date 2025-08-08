@@ -1,0 +1,78 @@
+{
+  "name": "rolldown-plugin-solid",
+  "version": "0.0.0",
+  "description": "A Rolldown plugin for compiling SolidJS JSX/TSX files using Babel presets",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "npx ultracite lint",
+    "lint:fix": "npx ultracite format",
+    "test": "jiti ./scripts/test.ts && serve tests",
+    "test:types": "tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp"
+  },
+  "keywords": [
+    "rolldown",
+    "plugin",
+    "solid",
+    "solidjs",
+    "jsx",
+    "tsx",
+    "babel",
+    "bundler",
+    "compiler"
+  ],
+  "author": "g-mero",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g-mero/rolldown-plugin-solid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/g-mero/rolldown-plugin-solid/issues"
+  },
+  "homepage": "https://github.com/g-mero/rolldown-plugin-solid#readme",
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "rolldown": ">=0.15.0",
+    "solid-js": ">=1.8.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.1.2",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^24.2.1",
+    "bumpp": "^10.2.2",
+    "husky": "^9.1.7",
+    "jiti": "^2.5.1",
+
+    "serve": "^14.2.4",
+    "solid-js": "^1.9.8",
+    "tsdown": "^0.13.4",
+    "ultracite": "5.1.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-typescript": "^7.27.1",
+    "babel-preset-solid": "^1.9.8"
+  }
+}

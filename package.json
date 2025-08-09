@@ -1,6 +1,6 @@
 {
   "name": "rolldown-plugin-solid",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Rolldown plugin for compiling SolidJS JSX/TSX files using Babel presets",
   "type": "module",
   "main": "./dist/index.js",
